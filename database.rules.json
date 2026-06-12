@@ -1,0 +1,12 @@
+{
+  "rules": {
+    "todo": {
+      ".read": true,
+      ".write": true,
+      ".indexOn": ["createdAt"],
+      "$id": {
+        ".validate": "newData.hasChildren(['title', 'quadrant']) && newData.child('title').isString() && newData.child('title').val().length > 0 && newData.child('title').val().length <= 80 && newData.child('quadrant').isNumber() && newData.child('quadrant').val() >= 1 && newData.child('quadrant').val() <= 4"
+      }
+    }
+  }
+}
